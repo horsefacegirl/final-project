@@ -24,6 +24,7 @@ export const SignUp = () => {
     })
       .then((res) => res.json())
       .then((user) => {
+        window.localStorage.setItem('accessToken', user.accessToken)
         if (user.accessToken) {
           history.push('/login')
         } else {
@@ -54,14 +55,16 @@ export const SignUp = () => {
         <label htmlFor='password'>Password</label>
         <input
           id='password'
-          type='text'
+          type='password'
           value={password}
           required
           onChange={(event) => setPassword(event.target.value)}></input>
         <button type='submit'>Sign up</button>
       </form>
-      <Link to='/login'>Already a user? Sign in here</Link>
+
       {errorMessage && <h2>{errorMessage}</h2>}
     </div>
   )
 }
+
+//<Link to='/login'>Already a user? Sign in here</Link>

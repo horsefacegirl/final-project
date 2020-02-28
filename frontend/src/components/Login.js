@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 export const Login = () => {
   const history = useHistory()
@@ -9,7 +9,7 @@ export const Login = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault()
-    fetch('http://localhost:8080/users', {
+    fetch('http://localhost:8080/sessions', {
       method: 'POST',
       body: JSON.stringify({
         email,
@@ -24,11 +24,14 @@ export const Login = () => {
       .then((user) => {
         if (user.accessToken) {
           history.push('/secrets')
+          console.log('it works')
         } else {
-          setErrorMessage(user.message)
+          setErrorMessage('user.message')
         }
       })
   }
+
+  //local storage
 
   return (
     <div>
@@ -51,6 +54,7 @@ export const Login = () => {
           onChange={(event) => setPassword(event.target.value)}></input>
         <button tyoe='submit'>Login</button>
       </form>
+      <Link to='/signup'>No account? Create one here</Link>
       {errorMessage && <h2>{errorMessage}</h2>}
     </div>
   )

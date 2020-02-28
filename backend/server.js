@@ -14,7 +14,7 @@ mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
 const User = mongoose.model('User', {
-  userName: {
+  username: {
     type: String,
     unique: true
   },
@@ -58,9 +58,9 @@ app.get('/secrets', (req, res) => {
 // Create new user
 app.post('/users', async (req, res) => {
   try {
-    const { userName, password, email } = req.body
+    const { username, password, email } = req.body
     const user = new User({
-      userName,
+      username,
       email,
       password: bcrypt.hashSync(password)
     })
