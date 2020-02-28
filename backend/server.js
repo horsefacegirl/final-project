@@ -50,8 +50,8 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
-app.get("/users", authenticateUser);
-app.get("/users", (req, res) => {
+app.get("/secrets", authenticateUser);
+app.get("/secrets", (req, res) => {
   res.json({ secret: "This is the secret" });
 });
 

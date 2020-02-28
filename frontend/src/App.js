@@ -1,5 +1,14 @@
-import React from "../frontend/src/react";
+import React from "react";
+import { Landing } from "./components/Landing";
+import { SignUp } from "./components/SignUp";
+import { Login } from "./components/Login";
 
 export const App = () => {
-  return <div>Find me in src/app.js!</div>;
+  return (
+    <div>
+      <Landing />
+      <SignUp />
+      <Login />
+    </div>
+  );
 };
