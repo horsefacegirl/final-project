@@ -73,6 +73,7 @@ app.post('/users', async (req, res) => {
     await user.save()
     res.status(201).json({ id: user._id, accessToken: user.accessToken })
   } catch (err) {
+    console.log(err)
     res.status(400).json({
       message: 'Could not create user. Please try again!',
       errors: err.errors

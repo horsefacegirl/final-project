@@ -22,6 +22,7 @@ export const Login = () => {
     })
       .then((res) => res.json())
       .then((user) => {
+        window.localStorage.setItem('accessToken', user.accessToken)
         if (user.accessToken) {
           history.push('/secrets')
           console.log('it works')
@@ -30,8 +31,6 @@ export const Login = () => {
         }
       })
   }
-
-  //local storage
 
   return (
     <div>

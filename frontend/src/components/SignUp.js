@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 export const SignUp = () => {
   const history = useHistory()
@@ -24,9 +24,9 @@ export const SignUp = () => {
     })
       .then((res) => res.json())
       .then((user) => {
-        // window.localStorage.setItem('accessToken', user.accessToken)
+        window.localStorage.setItem('accessToken', user.accessToken)
         if (user.accessToken) {
-          history.push('/sessions')
+          history.push('/secrets')
         } else {
           setErrorMessage(user.message)
         }
@@ -61,10 +61,8 @@ export const SignUp = () => {
           onChange={(event) => setPassword(event.target.value)}></input>
         <button type='submit'>Sign up</button>
       </form>
-
+      <Link to='/login'>Already a user? Sign in here</Link>
       {errorMessage && <h2>{errorMessage}</h2>}
     </div>
   )
 }
-
-//<Link to='/login'>Already a user? Sign in here</Link>
