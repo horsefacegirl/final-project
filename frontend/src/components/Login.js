@@ -26,7 +26,7 @@ export const Login = () => {
           history.push('/secrets')
           console.log('it works')
         } else {
-          setErrorMessage('user.message')
+          setErrorMessage(user.message)
         }
       })
   }
@@ -52,7 +52,7 @@ export const Login = () => {
           value={password}
           required
           onChange={(event) => setPassword(event.target.value)}></input>
-        <button tyoe='submit'>Login</button>
+        <button type='submit'>Login</button>
       </form>
       <Link to='/signup'>No account? Create one here</Link>
       {errorMessage && <h2>{errorMessage}</h2>}

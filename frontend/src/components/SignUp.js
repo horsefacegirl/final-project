@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 export const SignUp = () => {
   const history = useHistory()
@@ -13,9 +13,9 @@ export const SignUp = () => {
     fetch('http://localhost:8080/users', {
       method: 'POST',
       body: JSON.stringify({
-        username,
-        email,
-        password
+        username: username,
+        email: email,
+        password: password
       }),
       headers: {
         Accept: 'application/json',
@@ -24,9 +24,9 @@ export const SignUp = () => {
     })
       .then((res) => res.json())
       .then((user) => {
-        window.localStorage.setItem('accessToken', user.accessToken)
+        // window.localStorage.setItem('accessToken', user.accessToken)
         if (user.accessToken) {
-          history.push('/login')
+          history.push('/sessions')
         } else {
           setErrorMessage(user.message)
         }

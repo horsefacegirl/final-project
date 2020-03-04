@@ -32,6 +32,12 @@ const User = mongoose.model('User', {
   }
 })
 
+const Level = mongoose.model('Level', {
+  level: {
+    type: Number
+  }
+})
+
 const authenticateUser = async (req, res, next) => {
   const user = await User.findOne({ accessToken: req.header('Authorization') })
   if (user) {
@@ -58,7 +64,7 @@ app.get('/secrets', (req, res) => {
 // Create new user
 app.post('/users', async (req, res) => {
   try {
-    const { username, password, email } = req.body
+    const { username, email, password } = req.body
     const user = new User({
       username,
       email,
@@ -91,6 +97,21 @@ app.post('/sessions', async (req, res) => {
     res.status(401).json({
       message: 'Username or password is incorrect',
       errors: err.errors
+    })
+  }
+})
+
+// Post energy level
+app.post('/levels', async (req, res) => {
+  const { value } = req.body
+  const level = new Level({ value })
+  try {
+    const savedLevel = await level.save()
+    res.status(201).json(savedLevel)
+  } catch (err) {
+    res.status(400).json({
+      message: 'Could not save level',
+      error: err.errors
     })
   }
 })
