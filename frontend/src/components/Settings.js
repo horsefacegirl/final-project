@@ -7,7 +7,7 @@ export const Settings = () => {
   //LOG OUT
   const handleLogOut = () => {
     window.localStorage.removeItem('accessToken')
-    history.push('/login')
+    history.push('/')
   }
   return (
     <div>
