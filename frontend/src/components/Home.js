@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { NavBar } from 'components/NavBar'
+import logo2 from '../images/logo2.png'
+import { Header, Logo, Button, AppInfo } from '../styles'
 
 export const Home = () => {
   const history = useHistory()
@@ -31,6 +33,9 @@ export const Home = () => {
 
   return (
     <div>
+      <Header>
+        <Logo src={logo2} alt='logo' />
+      </Header>
       <h1>Hello {username}!</h1>
       <button id='level100' onClick={() => postLevel(100)}>
         100%

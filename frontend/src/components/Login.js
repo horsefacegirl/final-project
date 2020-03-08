@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory, Link } from 'react-router-dom'
+import logo2 from '../images/logo2.png'
+import { Header, Logo, Button, Form } from '../styles'
 
 export const Login = () => {
   const history = useHistory()
@@ -34,9 +36,10 @@ export const Login = () => {
 
   return (
     <div>
-      <img src='' alt='logo' />
-      <h1></h1>
-      <form onSubmit={handleLogin}>
+      <Header>
+        <Logo src={logo2} alt='logo' />
+      </Header>
+      <Form onSubmit={handleLogin}>
         <label htmlFor='email'>e-mail</label>
         <input
           id='email'
@@ -51,8 +54,8 @@ export const Login = () => {
           value={password}
           required
           onChange={(event) => setPassword(event.target.value)}></input>
-        <button type='submit'>Login</button>
-      </form>
+        <Button type='submit'>Login</Button>
+      </Form>
       <Link to='/signup'>No account? Create one here</Link>
       {errorMessage && <h2>{errorMessage}</h2>}
     </div>

@@ -1,22 +1,23 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import logo1 from '../images/logo1.png'
-import { Header, Logo, Button } from '../styles'
+import logo2 from '../images/logo2.png'
+import { Header, Logo, Button, AppInfo } from '../styles'
 
 export const Landing = () => {
   const history = useHistory()
   return (
     <div>
       <Header>
-        <Logo src={logo1} alt='logo' />
-        <h1>App name</h1>
+        <Logo src={logo2} alt='logo' />
       </Header>
       <Button onClick={() => history.push('/login')}>Login</Button>
       <Button onClick={() => history.push('/signup')}>Sign up</Button>
-      <h2>Info about app</h2>
-      <p>First fact</p>
-      <p>Second fact</p>
-      <p>Third fact</p>
+      <AppInfo>
+        <h2>Info about app</h2>
+        <p>Track your energy level</p>
+        <p>Get healty suggestions</p>
+        <p>Find your pattern</p>
+      </AppInfo>
     </div>
   )
 }
