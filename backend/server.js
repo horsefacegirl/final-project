@@ -71,7 +71,11 @@ app.post('/users', async (req, res) => {
       password: bcrypt.hashSync(password)
     })
     await user.save()
-    res.status(201).json({ id: user._id, accessToken: user.accessToken })
+    res.status(201).json({
+      username: user.username,
+      id: user._id,
+      accessToken: user.accessToken
+    })
   } catch (err) {
     console.log(err)
     res.status(400).json({
