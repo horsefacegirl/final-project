@@ -109,6 +109,7 @@ app.post('/sessions', async (req, res) => {
 })
 
 // Post energy level
+app.post('/levels', authenticateUser)
 app.post('/levels', async (req, res) => {
   const { value } = req.body
   const level = new Level({ value })

@@ -12,7 +12,8 @@ export const Home = () => {
       method: 'POST',
       body: JSON.stringify({ value: level }),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Authorization: accessToken
       }
     })
       .then((res) => res.json())
