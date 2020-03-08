@@ -47,7 +47,7 @@ export const Login = () => {
         <label htmlFor='password'>Password</label>
         <input
           id='password'
-          type='text'
+          type='password'
           value={password}
           required
           onChange={(event) => setPassword(event.target.value)}></input>
