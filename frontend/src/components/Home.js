@@ -23,6 +23,11 @@ export const Home = () => {
       })
   }
 
+  if (!accessToken) {
+    history.push('/')
+    return null
+  }
+
   return (
     <div>
       <h1>Hello {username}!</h1>
