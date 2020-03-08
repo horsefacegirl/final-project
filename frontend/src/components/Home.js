@@ -10,7 +10,7 @@ export const Home = () => {
   const postLevel = (level) => {
     fetch('http://localhost:8080/levels', {
       method: 'POST',
-      body: JSON.stringify({ value: level }),
+      body: JSON.stringify({ value: level, date: new Date() }),
       headers: {
         'Content-Type': 'application/json',
         Authorization: accessToken
