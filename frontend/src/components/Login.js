@@ -22,10 +22,10 @@ export const Login = () => {
     })
       .then((res) => res.json())
       .then((user) => {
-        window.localStorage.setItem('accessToken', user.accessToken)
         if (user.accessToken) {
+          window.localStorage.setItem('accessToken', user.accessToken)
+          window.localStorage.setItem('username', user.username)
           history.push('/secrets')
-          console.log('it works')
         } else {
           setErrorMessage(user.message)
         }

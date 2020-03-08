@@ -7,6 +7,7 @@ export const Secret = () => {
   const [level, setLevel] = useState(0)
   const history = useHistory()
   const accessToken = window.localStorage.getItem('accessToken')
+  const username = window.localStorage.getItem('username')
 
   useEffect(() => {
     fetch('http://localhost:8080/secrets', {
@@ -37,7 +38,7 @@ export const Secret = () => {
 
   return (
     <div>
-      <h1>Welcome!</h1>
+      <h1>Hello {username}!</h1>
       <button id='level100' onClick={postLevelToAPI(100)}>
         100%
       </button>

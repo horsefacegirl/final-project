@@ -24,8 +24,9 @@ export const SignUp = () => {
     })
       .then((res) => res.json())
       .then((user) => {
-        window.localStorage.setItem('accessToken', user.accessToken)
         if (user.accessToken) {
+          window.localStorage.setItem('accessToken', user.accessToken)
+          window.localStorage.setItem('username', user.username)
           history.push('/secrets')
         } else {
           setErrorMessage(user.message)
