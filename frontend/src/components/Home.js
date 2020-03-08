@@ -3,22 +3,9 @@ import { useHistory } from 'react-router-dom'
 import { NavBar } from 'components/NavBar'
 
 export const Home = () => {
-  const [message, setMessage] = useState()
-  const [level, setLevel] = useState(0)
   const history = useHistory()
   const accessToken = window.localStorage.getItem('accessToken')
   const username = window.localStorage.getItem('username')
-
-  useEffect(() => {
-    fetch('http://localhost:8080/secrets', {
-      method: 'GET',
-      headers: { Authorization: accessToken }
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        setMessage(res.secret)
-      })
-  }, [])
 
   const postLevelToAPI = (level) => {
     fetch('http://localhost:8080/levels', {
