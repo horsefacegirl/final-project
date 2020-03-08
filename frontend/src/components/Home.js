@@ -35,6 +35,15 @@ export const Home = () => {
       <button id='level100' onClick={() => postLevel(100)}>
         100%
       </button>
+      <button id='level75' onClick={() => postLevel(75)}>
+        75%
+      </button>
+      <button id='level50' onClick={() => postLevel(50)}>
+        50%
+      </button>
+      <button id='level25' onClick={() => postLevel(25)}>
+        25%
+      </button>
       <NavBar />
     </div>
   )
