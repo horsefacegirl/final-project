@@ -7,18 +7,18 @@ export const Home = () => {
   const accessToken = window.localStorage.getItem('accessToken')
   const username = window.localStorage.getItem('username')
 
-  const postLevelToAPI = (level) => {
+  const postLevel = (level) => {
     fetch('http://localhost:8080/levels', {
       method: 'POST',
-      body: JSON.stringify({ level: level }),
+      body: JSON.stringify({ value: level }),
       headers: {
         'Content-Type': 'application/json'
       }
     })
       .then((res) => res.json())
       .then((res) => {
-        if (res.ok) {
-          history.push('/statistics')
+        if (res._id) {
+          history.push('/stats')
         }
       })
   }
@@ -31,7 +31,7 @@ export const Home = () => {
   return (
     <div>
       <h1>Hello {username}!</h1>
-      <button id='level100' onClick={postLevelToAPI(100)}>
+      <button id='level100' onClick={() => postLevel(100)}>
         100%
       </button>
       <NavBar />

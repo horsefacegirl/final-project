@@ -33,8 +33,9 @@ const User = mongoose.model('User', {
 })
 
 const Level = mongoose.model('Level', {
-  level: {
-    type: Number
+  value: {
+    type: Number,
+    required: true
   }
 })
 
