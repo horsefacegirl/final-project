@@ -36,6 +36,11 @@ const Level = mongoose.model('Level', {
   value: {
     type: Number,
     required: true
+  },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
   }
 })
 
@@ -112,7 +117,7 @@ app.post('/sessions', async (req, res) => {
 app.post('/levels', authenticateUser)
 app.post('/levels', async (req, res) => {
   const { value } = req.body
-  const level = new Level({ value })
+  const level = new Level({ value, user: req.user._id })
   try {
     const savedLevel = await level.save()
     res.status(201).json(savedLevel)
