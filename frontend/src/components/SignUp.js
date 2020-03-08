@@ -49,7 +49,7 @@ export const SignUp = () => {
         <label htmlFor='email'>e-mail</label>
         <input
           id='email'
-          type='text'
+          type='email'
           value={email}
           required
           onChange={(event) => setEmail(event.target.value)}></input>
