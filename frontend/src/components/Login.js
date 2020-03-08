@@ -25,7 +25,7 @@ export const Login = () => {
         if (user.accessToken) {
           window.localStorage.setItem('accessToken', user.accessToken)
           window.localStorage.setItem('username', user.username)
-          history.push('/secrets')
+          history.push('/home')
         } else {
           setErrorMessage(user.message)
         }

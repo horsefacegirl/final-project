@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Landing } from './components/Landing'
 import { SignUp } from './components/SignUp'
 import { Login } from './components/Login'
-import { Secret } from './components/Secret'
+import { Home } from './components/Home'
 import { Statistics } from './components/Statistics'
 import { Settings } from './components/Settings'
 
@@ -20,8 +20,8 @@ export const App = () => {
         <Route path='/login'>
           <Login />
         </Route>
-        <Route path='/secrets'>
-          <Secret />
+        <Route path='/home'>
+          <Home />
         </Route>
         <Route path='/stats'>
           <Statistics />

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { NavBar } from 'components/NavBar'
 
-export const Secret = () => {
+export const Home = () => {
   const [message, setMessage] = useState()
   const [level, setLevel] = useState(0)
   const history = useHistory()
