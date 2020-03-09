@@ -40,7 +40,7 @@ export const Login = () => {
         <Logo src={logo2} alt='logo' />
       </Header>
       <Form onSubmit={handleLogin}>
-        <label htmlFor='email'>e-mail</label>
+        <label htmlFor='email'>E-mail</label>
         <input
           id='email'
           type='email'

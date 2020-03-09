@@ -50,7 +50,7 @@ export const SignUp = () => {
           value={username}
           required
           onChange={(event) => setUsername(event.target.value)}></input>
-        <label htmlFor='email'>e-mail</label>
+        <label htmlFor='email'>E-mail</label>
         <input
           id='email'
           type='email'
