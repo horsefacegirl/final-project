@@ -22,9 +22,9 @@ export const Button = styled.button`
   font-size: 0.8em;
   border: none;
   border-radius: 21px;
-  background: linear-gradient(145deg, #f0e7ec, #cac2c7);
-  box-shadow: 7px 7px 14px #c5bec2, -7px -7px 14px #fbf2f8;
 `
+// background: linear-gradient(145deg, #f0e7ec, #cac2c7);
+//   box-shadow: 7px 7px 14px #c5bec2, -7px -7px 14px #fbf2f8;
 
 export const ButtonA = styled.button`
   width: 50px;
