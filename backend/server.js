@@ -136,7 +136,7 @@ app.post('/levels', async (req, res) => {
 // Get energy level
 app.get('/levels', authenticateUser)
 app.get('/levels', async (req, res) => {
-  const level = await Level.find({ user: req.user_id })
+  const level = await Level.find({ user: req.user._id })
   return res.json(level)
 })
 
