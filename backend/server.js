@@ -133,6 +133,13 @@ app.post('/levels', async (req, res) => {
   }
 })
 
+// Get energy level
+app.get('/levels', authenticateUser)
+app.get('/levels', async (req, res) => {
+  const level = await Level.find({ user: req.user_id })
+  return res.json(level)
+})
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`)
