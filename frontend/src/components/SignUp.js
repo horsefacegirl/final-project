@@ -1,7 +1,16 @@
 import React, { useState } from 'react'
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import logo2 from '../images/logo2.png'
-import { Header, Logo, Button, Form } from '../styles'
+import {
+  Header,
+  Logo,
+  Button,
+  Form,
+  InputField,
+  Input,
+  Label,
+  StyledLink
+} from '../styles'
 
 export const SignUp = () => {
   const history = useHistory()
@@ -43,30 +52,32 @@ export const SignUp = () => {
       </Header>
 
       <Form onSubmit={handleSignUp}>
-        <label htmlFor='username'>Username</label>
-        <input
-          id='username'
-          type='text'
-          value={username}
-          required
-          onChange={(event) => setUsername(event.target.value)}></input>
-        <label htmlFor='email'>E-mail</label>
-        <input
-          id='email'
-          type='email'
-          value={email}
-          required
-          onChange={(event) => setEmail(event.target.value)}></input>
-        <label htmlFor='password'>Password</label>
-        <input
-          id='password'
-          type='password'
-          value={password}
-          required
-          onChange={(event) => setPassword(event.target.value)}></input>
+        <InputField>
+          <Label htmlFor='username'>Username</Label>
+          <Input
+            id='username'
+            type='text'
+            value={username}
+            required
+            onChange={(event) => setUsername(event.target.value)}></Input>
+          <Label htmlFor='email'>E-mail</Label>
+          <Input
+            id='email'
+            type='email'
+            value={email}
+            required
+            onChange={(event) => setEmail(event.target.value)}></Input>
+          <Label htmlFor='password'>Password</Label>
+          <Input
+            id='password'
+            type='password'
+            value={password}
+            required
+            onChange={(event) => setPassword(event.target.value)}></Input>
+        </InputField>
         <Button type='submit'>Sign up</Button>
       </Form>
-      <Link to='/login'>Already a user? Sign in here</Link>
+      <StyledLink to='/login'>Already a user? Sign in here</StyledLink>
       {errorMessage && <h2>{errorMessage}</h2>}
     </div>
   )

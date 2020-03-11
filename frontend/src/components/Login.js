@@ -1,7 +1,16 @@
 import React, { useState } from 'react'
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import logo2 from '../images/logo2.png'
-import { Header, Logo, Button, Form } from '../styles'
+import {
+  Header,
+  Logo,
+  Button,
+  Form,
+  InputField,
+  Input,
+  Label,
+  StyledLink
+} from '../styles'
 
 export const Login = () => {
   const history = useHistory()
@@ -40,23 +49,25 @@ export const Login = () => {
         <Logo src={logo2} alt='logo' />
       </Header>
       <Form onSubmit={handleLogin}>
-        <label htmlFor='email'>E-mail</label>
-        <input
-          id='email'
-          type='email'
-          value={email}
-          required
-          onChange={(event) => setEmail(event.target.value)}></input>
-        <label htmlFor='password'>Password</label>
-        <input
-          id='password'
-          type='password'
-          value={password}
-          required
-          onChange={(event) => setPassword(event.target.value)}></input>
+        <InputField>
+          <Label htmlFor='email'>E-mail</Label>
+          <Input
+            id='email'
+            type='email'
+            value={email}
+            required
+            onChange={(event) => setEmail(event.target.value)}></Input>
+          <Label htmlFor='password'>Password</Label>
+          <Input
+            id='password'
+            type='password'
+            value={password}
+            required
+            onChange={(event) => setPassword(event.target.value)}></Input>
+        </InputField>
         <Button type='submit'>Login</Button>
       </Form>
-      <Link to='/signup'>No account? Create one here</Link>
+      <StyledLink to='/signup'>No account? Create one here</StyledLink>
       {errorMessage && <h2>{errorMessage}</h2>}
     </div>
   )

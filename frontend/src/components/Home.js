@@ -2,7 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { NavBar } from 'components/NavBar'
 import logo2 from '../images/logo2.png'
-import { Header, Logo, Levels, ButtonA } from '../styles'
+import {
+  Header,
+  Logo,
+  Levels,
+  Button100,
+  Button75,
+  Button50,
+  Button25
+} from '../styles'
 
 export const Home = () => {
   const history = useHistory()
@@ -39,20 +47,23 @@ export const Home = () => {
       <h1>Hello {username}!</h1>
       <p>Choose your energy level</p>
       <Levels>
-        <ButtonA id='level100' onClick={() => postLevel(100)}>
+        <Button100 id='level100' onClick={() => postLevel(100)}>
           100%
-        </ButtonA>
-        <ButtonA id='level75' onClick={() => postLevel(75)}>
+        </Button100>
+        <Button75 id='level75' onClick={() => postLevel(75)}>
           75%
-        </ButtonA>
-        <ButtonA id='level50' onClick={() => postLevel(50)}>
+        </Button75>
+        <Button50 id='level50' onClick={() => postLevel(50)}>
           50%
-        </ButtonA>
-        <ButtonA id='level25' onClick={() => postLevel(25)}>
+        </Button50>
+        <Button25 id='level25' onClick={() => postLevel(25)}>
           25%
-        </ButtonA>
+        </Button25>
       </Levels>
       <NavBar />
     </div>
   )
 }
+
+// Naming of buttons?
+// Range slider?
