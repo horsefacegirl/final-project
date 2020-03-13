@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { NavBar } from './NavBar'
 import Calendar from 'react-calendar'
 
@@ -10,24 +10,21 @@ const colors = {
 }
 
 export const Statistics = () => {
-  const [levels, setLevels] = useState()
-  const handleSetLevels = () => {
-    //Don't run code if we don't have levels
-    if (!levels) return
-    levels.forEach(level => {
-      const date = new Date(level.date)
-      const formatDate = date.toLocaleDateString("sv-SE", { year: "numeric", month: "long", day: "numeric" })
-      //Select date by aria-label (unique)
-      const selectedDate = document.querySelector(`[aria-label="${formatDate}"]`)
-      selectedDate.parentNode.classList.add('styledDate')
-      //Set background color for different levels
-      selectedDate.parentNode.style.background = colors[level.value]
-    })
+  const handleSetLevels = (levels) => {
+    setTimeout(() => {
+      levels.forEach(level => {
+        const date = new Date(level.date)
+        const formatDate = date.toLocaleDateString("sv-SE", { year: "numeric", month: "long", day: "numeric" })
+        //Select date by aria-label (unique)
+        const selectedDate = document.querySelector(`[aria-label="${formatDate}"]`)
+        if (selectedDate) {
+          selectedDate.parentNode.classList.add('styledDate')
+          //Set background color for different levels
+          selectedDate.parentNode.style.background = colors[level.value]
+        }
+      })
+    }, 100)
   }
-  //Triggers when levels change (useState)
-  useEffect(() => {
-    handleSetLevels()
-  }, [levels])
 
   useEffect(() => {
     fetch("http://localhost:8080/levels", {
@@ -40,21 +37,25 @@ export const Statistics = () => {
     })
       .then(res => res.json())
       .then(json => {
-        //Saving levels in state
-        setLevels(json)
+        //handle response in handleSetLevels (not saving)
+        handleSetLevels(json)
+        const arrows = Array.from(document.getElementsByClassName("react-calendar__navigation__arrow"))
+        //addEventListener runs handleSetLevels again when clicking on either of these buttons.
+        //No need for useState
+        arrows.forEach(element => element.addEventListener("click", () => handleSetLevels(json)))
       })
-  }, [])
-  const handleOnViewChange = () => {
-    console.log(levels)
-    if (levels) {
-      handleSetLevels()
+
+    //Clean up listeners
+    return () => {
+      const arrows = Array.from(document.getElementsByClassName("react-calendar__navigation__arrow"))
+      arrows.forEach(element => element.removeEventListener("click", () => handleSetLevels()))
     }
-  }
+  }, [])
 
   return (
     <div>
       <p>Statistics</p>
-      <Calendar onViewChange={() => handleOnViewChange()} />
+      <Calendar />
       <NavBar />
     </div>
   )
