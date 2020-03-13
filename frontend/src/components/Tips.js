@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { NavBar } from 'components/NavBar'
-import { tips25, tips50, tips75, tips100 } from '../FeelGoodData'
+import { tips } from '../FeelGoodData'
 import logo2 from '../images/logo2.png'
 import {
   Header,
@@ -13,8 +13,8 @@ export const Tips = () => {
   const accessToken = window.localStorage.getItem('accessToken')
   const username = window.localStorage.getItem('username')
   const levelValue = window.localStorage.getItem('levelValue')
-  const getRandomTips = tips100[
-    Math.floor(Math.random() * tips100.length)
+  const getRandomTips = tips[`tips${levelValue}`][
+    Math.floor(Math.random() * tips[`tips${levelValue}`].length)
   ]
 
   if (!accessToken) {
