@@ -29,7 +29,8 @@ export const Home = () => {
       .then((res) => res.json())
       .then((res) => {
         if (res._id) {
-          history.push('/stats')
+          window.localStorage.setItem('levelValue', level)
+          history.push('/tips')
         }
       })
   }

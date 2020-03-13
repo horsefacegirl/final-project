@@ -6,6 +6,7 @@ import { Login } from './components/Login'
 import { Home } from './components/Home'
 import { Statistics } from './components/Statistics'
 import { Settings } from './components/Settings'
+import { Tips } from './components/Tips'
 
 export const App = () => {
   return (
@@ -22,6 +23,9 @@ export const App = () => {
         </Route>
         <Route path='/home'>
           <Home />
+        </Route>
+        <Route path='/tips'>
+          <Tips />
         </Route>
         <Route path='/stats'>
           <Statistics />
