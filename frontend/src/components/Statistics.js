@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { NavBar } from './NavBar'
 import Calendar from 'react-calendar'
 
+const colors = {
+  25: "#654f6f",
+  50: "#7576a5",
+  75: "#7ea16b",
+  100: "eac419"
+}
+
 export const Statistics = () => {
   const [levels, setLevels] = useState()
   const handleSetLevels = () => {
@@ -13,6 +20,8 @@ export const Statistics = () => {
       //Select date by aria-label (unique)
       const selectedDate = document.querySelector(`[aria-label="${formatDate}"]`)
       selectedDate.parentNode.classList.add('styledDate')
+      //Set background color for different levels
+      selectedDate.parentNode.style.background = colors[level.value]
     })
   }
   //Triggers when levels change (useState)
@@ -35,11 +44,17 @@ export const Statistics = () => {
         setLevels(json)
       })
   }, [])
+  const handleOnViewChange = () => {
+    console.log(levels)
+    if (levels) {
+      handleSetLevels()
+    }
+  }
 
   return (
     <div>
       <p>Statistics</p>
-      <Calendar />
+      <Calendar onViewChange={() => handleOnViewChange()} />
       <NavBar />
     </div>
   )

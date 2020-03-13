@@ -22,8 +22,6 @@ export const Tips = () => {
     return null
   }
 
-  //How can we get the selected level?? localStorage? 
-  //If level ex 25, how to get tips25?
   return (
     <div>
       <Header>

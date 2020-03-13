@@ -21,6 +21,7 @@ body {
     monospace;
 } */
 
-.styledDate {
-  background: blue!important;
-}
+
+/* important to use important on every key */
+
+.styledDate {}
