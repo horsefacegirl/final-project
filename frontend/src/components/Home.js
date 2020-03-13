@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import { NavBar } from 'components/NavBar'
 import logo2 from '../images/logo2.png'
 import {
   Header,
@@ -61,7 +60,6 @@ export const Home = () => {
           25%
         </Button25>
       </Levels>
-      <NavBar />
     </div>
   )
 }

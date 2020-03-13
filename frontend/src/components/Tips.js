@@ -31,7 +31,6 @@ export const Tips = () => {
       <h1>{levelValue}%</h1>
       <p>Always listen to your body... or</p>
       <h2>{getRandomTips}</h2>
-      <NavBar />
     </div>
   )
 }

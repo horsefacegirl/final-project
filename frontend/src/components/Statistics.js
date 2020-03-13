@@ -56,7 +56,6 @@ export const Statistics = () => {
     <div>
       <p>Statistics</p>
       <Calendar />
-      <NavBar />
     </div>
   )
 }

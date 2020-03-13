@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { slide as Menu } from 'react-burger-menu'
 
-export const NavBar = () => {
-  const history = useHistory()
-  return (
-    <div>
-      <button onClick={() => history.push('/home')}>Home</button>
-      <button onClick={() => history.push('/stats')}>Stats</button>
-      <button onClick={() => history.push('/settings')}>Settings</button>
-    </div>
-  )
+const handleLogOut = () => {
+  window.localStorage.removeItem('accessToken')
 }
+
+export const Navbar = () => (
+  <Menu right>
+    <Link to="/home">Home</Link>
+    <Link to="/stats">Statistics</Link>
+    <Link to="/tips">Tips</Link>
+    <Link to="/" onClick={() => handleLogOut()}>Log out</Link>
+  </Menu>
+)
