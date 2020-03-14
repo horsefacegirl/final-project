@@ -74,6 +74,36 @@ export const Button100 = styled(ButtonA)`
   background-color: #eac419;
 `
 
+const Dot = styled.span`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 2px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 4px;
+`
+
+export const Dot25 = styled(Dot)`
+  background-color: #654f6f;
+`
+
+export const Dot50 = styled(Dot)`
+  background-color: #7576a5;
+`
+
+export const Dot75 = styled(Dot)`
+  background-color: #7ea16b;
+`
+
+export const Dot100 = styled(Dot)`
+  background-color: #eac419;
+`
+
 export const FlexColumn = styled.div`
   display: flex;
   flex-direction: column;
@@ -114,7 +144,7 @@ export const Input = styled.input`
   width: 82%;
   max-width: 300px;
   box-sizing: border-box;
-  padding: 0.7em 0;
+  padding: 0.7em;
   font-family: inherit;
   font-weight: inherit;
   :focus {

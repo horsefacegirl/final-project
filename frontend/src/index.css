@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
+  font-feature-settings: 'lnum';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto;
@@ -12,7 +13,11 @@ body {
   height: 100vh;
 }
 
-/* important to use important on every key */
-
-.styledDate {
+.react-calendar,
+.react-calendar button {
+  font-family: inherit;
 }
+
+/* .styledDate {
+  color: white !important;
+} */

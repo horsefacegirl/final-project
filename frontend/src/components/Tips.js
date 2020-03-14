@@ -3,19 +3,17 @@ import { useHistory } from 'react-router-dom'
 import { NavBar } from 'components/NavBar'
 import { tips } from '../FeelGoodData'
 import logo2 from '../images/logo2.png'
-import {
-  Header,
-  Logo
-} from '../styles'
+import { Header, Logo } from '../styles'
 
 export const Tips = () => {
   const history = useHistory()
   const accessToken = window.localStorage.getItem('accessToken')
   const username = window.localStorage.getItem('username')
   const levelValue = window.localStorage.getItem('levelValue')
-  const getRandomTips = tips[`tips${levelValue}`][
-    Math.floor(Math.random() * tips[`tips${levelValue}`].length)
-  ]
+  const getRandomTips =
+    tips[`tips${levelValue}`][
+      Math.floor(Math.random() * tips[`tips${levelValue}`].length)
+    ]
 
   if (!accessToken) {
     history.push('/')
@@ -27,7 +25,7 @@ export const Tips = () => {
       <Header>
         <Logo src={logo2} alt='logo' />
       </Header>
-      <h1>{username}</h1>
+      {/* <h1>{username}</h1> */}
       <h1>{levelValue}%</h1>
       <p>Always listen to your body... or</p>
       <h2>{getRandomTips}</h2>

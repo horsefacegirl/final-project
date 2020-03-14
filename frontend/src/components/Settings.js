@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { NavBar } from './NavBar'
-import { Button } from '../styles'
+import { Button, H1 } from '../styles'
 
 export const Settings = () => {
   const history = useHistory()
@@ -12,7 +12,7 @@ export const Settings = () => {
   }
   return (
     <div>
-      <p>Settings</p>
+      <H1>Settings</H1>
       <Button onClick={() => handleLogOut()}>Log out</Button>
       <NavBar />
     </div>
