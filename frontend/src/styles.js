@@ -1,15 +1,20 @@
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 
+//make a media query here for Header, when burger menu show, logo to the left instead
 export const Header = styled.header`
   display: flex;
   justify-content: center;
   margin: 10px 10px 40px 10px;
 `
-//make a media query here for Header, when burger menu show, logo to the left instead
 
 export const Logo = styled.img`
   height: 60px;
+`
+
+export const H1 = styled.h1`
+  text-transform: uppercase;
+  font-weight: 900;
 `
 
 export const Button = styled.button`
@@ -20,7 +25,7 @@ export const Button = styled.button`
   width: 11rem;
   border: 2px solid black;
   font-size: 1em;
-  cursor: pointer !important;
+  cursor: pointer;
   font-family: 'Raleway';
   font-weight: 600;
   transition: color 0.4s ease 0s;
@@ -42,13 +47,15 @@ export const Button = styled.button`
 // `
 
 const ButtonA = styled.button`
-  width: 50px;
-  height: 50px;
-  margin: 20px 10px;
-  font-size: 0.8em;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 1.5em;
   border: none;
   border-radius: 50px;
   color: white;
+  cursor: pointer;
 `
 
 export const Button25 = styled(ButtonA)`
@@ -81,6 +88,10 @@ export const Levels = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+export const LevelRow = styled.div`
+  display: inline;
 `
 
 export const Form = styled.form`
