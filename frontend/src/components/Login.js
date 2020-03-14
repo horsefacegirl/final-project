@@ -50,14 +50,14 @@ export const Login = () => {
       </Header>
       <Form onSubmit={handleLogin}>
         <InputField>
-          <Label htmlFor='email'>E-mail</Label>
+          <Label htmlFor='email'>E-MAIL</Label>
           <Input
             id='email'
             type='email'
             value={email}
             required
             onChange={(event) => setEmail(event.target.value)}></Input>
-          <Label htmlFor='password'>Password</Label>
+          <Label htmlFor='password'>PASSWORD</Label>
           <Input
             id='password'
             type='password'

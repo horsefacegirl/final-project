@@ -53,21 +53,21 @@ export const SignUp = () => {
 
       <Form onSubmit={handleSignUp}>
         <InputField>
-          <Label htmlFor='username'>Username</Label>
+          <Label htmlFor='username'>USERNAME</Label>
           <Input
             id='username'
             type='text'
             value={username}
             required
             onChange={(event) => setUsername(event.target.value)}></Input>
-          <Label htmlFor='email'>E-mail</Label>
+          <Label htmlFor='email'>E-MAIL</Label>
           <Input
             id='email'
             type='email'
             value={email}
             required
             onChange={(event) => setEmail(event.target.value)}></Input>
-          <Label htmlFor='password'>Password</Label>
+          <Label htmlFor='password'>PASSWORD</Label>
           <Input
             id='password'
             type='password'

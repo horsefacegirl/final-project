@@ -4,28 +4,42 @@ import { Link } from 'react-router-dom'
 export const Header = styled.header`
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 10px 10px 40px 10px;
 `
+//make a media query here for Header, when burger menu show, logo to the left instead
+
 export const Logo = styled.img`
   height: 60px;
 `
-// export const Button = styled.button`
-//   border-radius: 50px;
-//   background: linear-gradient(225deg, #f0c2cf, #caa3ae);
-//   box-shadow: -20px 20px 51px #b3919a, 20px -20px 51px #ffd9e8;
-// `
 
-//tried a lighter color
 export const Button = styled.button`
-  background: transparent;
-  border: black solid 1px;
-  padding: 10px 25px;
-  margin: 20px 10px;
-  font-size: 0.8em;
-  border-radius: 21px;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0.5rem 0;
+  margin: 0.7rem 1rem;
+  width: 11rem;
+  border: 2px solid black;
+  font-size: 1em;
+  cursor: pointer !important;
+  font-family: 'Raleway';
+  font-weight: 600;
+  transition: color 0.4s ease 0s;
+  background: ${(props) => (props.primary ? 'black' : 'transparent')};
+  color: ${(props) => (props.primary ? 'white' : 'black')};
+  &:hover {
+    background: ${(props) => (props.primary ? 'transparent' : 'black')};
+    color: ${(props) => (props.primary ? 'black' : 'white')};
+  }
 `
-// background: linear-gradient(145deg, #f0e7ec, #cac2c7);
-//   box-shadow: 7px 7px 14px #c5bec2, -7px -7px 14px #fbf2f8;
+
+// export const Button = styled.button`
+//   background: transparent;
+//   border: black solid 1px;
+//   padding: 10px 25px;
+//   margin: 20px 10px;
+//   font-size: 0.8em;
+//   border-radius: 21px;
+// `
 
 const ButtonA = styled.button`
   width: 50px;
@@ -36,17 +50,27 @@ const ButtonA = styled.button`
   border-radius: 50px;
   color: white;
 `
+
 export const Button25 = styled(ButtonA)`
   background-color: #654f6f;
 `
+
 export const Button50 = styled(ButtonA)`
   background-color: #7576a5;
 `
+
 export const Button75 = styled(ButtonA)`
   background-color: #7ea16b;
 `
+
 export const Button100 = styled(ButtonA)`
   background-color: #eac419;
+`
+
+export const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const AppInfo = styled.div`
@@ -62,6 +86,7 @@ export const Levels = styled.div`
 export const Form = styled.form`
   margin: 50px 0 20px;
 `
+
 export const InputField = styled.div`
   display: flex;
   flex-direction: column;
@@ -85,9 +110,11 @@ export const Input = styled.input`
     outline: none;
   }
 `
+
 export const Label = styled.label`
   margin-top: 20px;
 `
+
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;

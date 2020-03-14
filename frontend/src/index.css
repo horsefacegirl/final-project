@@ -1,27 +1,18 @@
 body {
   margin: 0;
-  /* font-family: 'Pathway Gothic One', sans-serif; */
-  font-family: 'BenchNine', sans-serif;
-  /* font-family: 'Carrois Gothic', sans-serif; */
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #e9e9e9; */
   margin: 0 auto;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.1em;
   background-image: url('./images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
 
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
-
 /* important to use important on every key */
 
-.styledDate {}
+.styledDate {
+}
