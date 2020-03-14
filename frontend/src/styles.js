@@ -26,7 +26,7 @@ export const Button = styled.button`
   border: 2px solid black;
   font-size: 1em;
   cursor: pointer;
-  font-family: 'Raleway';
+  font-family: inherit;
   font-weight: 600;
   transition: color 0.4s ease 0s;
   background: ${(props) => (props.primary ? 'black' : 'transparent')};
@@ -50,6 +50,7 @@ const ButtonA = styled.button`
   width: 100px;
   height: 100px;
   margin: 10px;
+  font-family: inherit;
   font-weight: 600;
   font-size: 1.5em;
   border: none;
