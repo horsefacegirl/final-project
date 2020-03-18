@@ -105,9 +105,11 @@ export const Dot100 = styled(Dot)`
 `
 
 export const FlexColumn = styled.div`
+margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 80%;
 `
 
 export const AppInfo = styled.div`

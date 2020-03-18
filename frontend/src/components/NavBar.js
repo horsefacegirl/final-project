@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { StyledLink } from '../styles'
 import { slide as Menu } from 'react-burger-menu'
 

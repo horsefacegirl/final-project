@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { tips } from '../FeelGoodData'
+import { FlexColumn, Button } from 'styles'
 
 export const Tips = () => {
   const history = useHistory()
@@ -17,10 +18,11 @@ export const Tips = () => {
   }
 
   return (
-    <div>
+    <FlexColumn>
       <h1>{levelValue}%</h1>
       <p>Always listen to your body... or</p>
       <h2>{getRandomTips}</h2>
-    </div>
+      <Button onClick={() => history.push('/stats')}>See your pattern</Button>
+    </FlexColumn>
   )
 }
