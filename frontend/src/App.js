@@ -28,7 +28,7 @@ export const App = () => {
         <Route path='/tips'>
           <Navbar />
           <Tips />
-        </Route>
+        </Route>cd
         <Route path='/stats'>
           <Navbar />
           <Statistics />

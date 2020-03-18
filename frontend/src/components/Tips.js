@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import { NavBar } from 'components/NavBar'
 import { tips } from '../FeelGoodData'
 import logo2 from '../images/logo2.png'
 import {
