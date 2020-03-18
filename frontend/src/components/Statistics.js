@@ -6,7 +6,7 @@ const colors = {
   25: '#654f6f',
   50: '#7576a5',
   75: '#7ea16b',
-  100: 'eac419'
+  100: '#eac419'
 }
 
 export const Statistics = () => {
