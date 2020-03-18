@@ -34,7 +34,7 @@ export const App = () => {
           <Header />
           <Navbar />
           <Tips />
-        </Route>cd
+        </Route>
         <Route path='/stats'>
           <Header />
           <Navbar />
