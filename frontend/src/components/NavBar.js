@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyledLink } from '../styles'
 import { slide as Menu } from 'react-burger-menu'
 import useWindowSize from '../useWindowSize'
+import hamburger from '../images/hamburger.png'
+import cross from '../images/cross.png'
 
 const handleLogOut = () => {
   window.localStorage.removeItem('accessToken')
@@ -9,14 +11,28 @@ const handleLogOut = () => {
 
 export const Navbar = () => {
   const window = useWindowSize()
-  console.log(window)
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+
   return (
-    <Menu right width={window.width < 400 ? '100%' : window.width < 800 ? '40%' : '25%'}>
-      <StyledLink to="/home">Home</StyledLink>
-      <StyledLink to="/stats">Statistics</StyledLink>
-      <StyledLink to="/tips">Tips</StyledLink>
-      <StyledLink to="/" onClick={() => handleLogOut()}>Log out</StyledLink>
+    <Menu
+      isOpen={menuIsOpen}
+      onStateChange={(state) => setMenuIsOpen(state.isOpen)}
+      customBurgerIcon={<img src={hamburger} />}
+      customCrossIcon={<img src={cross} />}
+      right
+      width={window.width < 600 ? '100%' : '40%'}>
+      <StyledLink to='/home' onClick={() => setMenuIsOpen(false)}>
+        Home
+      </StyledLink>
+      <StyledLink to='/stats' onClick={() => setMenuIsOpen(false)}>
+        Statistics
+      </StyledLink>
+      <StyledLink to='/tips' onClick={() => setMenuIsOpen(false)}>
+        Tips
+      </StyledLink>
+      <StyledLink to='/' onClick={() => handleLogOut()}>
+        Log out
+      </StyledLink>
     </Menu>
   )
 }
-

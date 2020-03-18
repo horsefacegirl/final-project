@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { tips } from '../FeelGoodData'
-import { FlexColumn, Button } from 'styles'
+import { FlexColumn, H1, Button } from 'styles'
 
 export const Tips = () => {
   const history = useHistory()
@@ -9,7 +9,7 @@ export const Tips = () => {
   const levelValue = window.localStorage.getItem('levelValue')
   const getRandomTips =
     tips[`tips${levelValue}`][
-    Math.floor(Math.random() * tips[`tips${levelValue}`].length)
+      Math.floor(Math.random() * tips[`tips${levelValue}`].length)
     ]
 
   if (!accessToken) {
@@ -18,11 +18,13 @@ export const Tips = () => {
   }
 
   return (
-    <FlexColumn>
-      <h1>{levelValue}%</h1>
-      <p>Always listen to your body... or</p>
-      <h2>{getRandomTips}</h2>
+    <>
+      <FlexColumn>
+        <H1>{levelValue}%</H1>
+        <p>Always listen to your body... or</p>
+        <h2>{getRandomTips}</h2>
+      </FlexColumn>
       <Button onClick={() => history.push('/stats')}>See your pattern</Button>
-    </FlexColumn>
+    </>
   )
 }

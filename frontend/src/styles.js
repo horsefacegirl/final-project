@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 //make a media query here for Header, when burger menu show, logo to the left instead
 export const StyledHeader = styled.div`
-background: white;
-height: 80px;
+  background: white;
+  padding: 0.7em 0 0.7em 1.2em;
 `
 
 export const Logo = styled.img`
@@ -14,6 +14,8 @@ export const Logo = styled.img`
 export const H1 = styled.h1`
   text-transform: uppercase;
   font-weight: 900;
+  margin-top: 0;
+  text-align: center;
 `
 
 export const Button = styled.button`
@@ -30,25 +32,13 @@ export const Button = styled.button`
   transition: color 0.4s ease 0s;
   background: ${(props) => (props.primary ? 'black' : 'transparent')};
   color: ${(props) => (props.primary ? 'white' : 'black')};
-  &:hover {
-    background: ${(props) => (props.primary ? 'transparent' : 'black')};
-    color: ${(props) => (props.primary ? 'black' : 'white')};
   }
 `
-
-// export const Button = styled.button`
-//   background: transparent;
-//   border: black solid 1px;
-//   padding: 10px 25px;
-//   margin: 20px 10px;
-//   font-size: 0.8em;
-//   border-radius: 21px;
-// `
 
 const ButtonA = styled.button`
   width: 100px;
   height: 100px;
-  margin: 10px;
+  margin: 0.5em;
   font-family: inherit;
   font-weight: 600;
   font-size: 1.5em;
@@ -105,7 +95,7 @@ export const Dot100 = styled(Dot)`
 `
 
 export const FlexColumn = styled.div`
-margin: 0 auto;
+  margin: 3em auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,6 +104,7 @@ margin: 0 auto;
 
 export const AppInfo = styled.div`
   text-align: center;
+  margin: 4em 0 0;
 `
 
 export const Levels = styled.div`
@@ -127,14 +118,14 @@ export const LevelRow = styled.div`
 `
 
 export const Form = styled.form`
-  margin: 50px 0 20px;
+  margin: 3em 0 1em;
 `
 
 export const InputField = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 4em;
 `
 
 export const Input = styled.input`
@@ -155,7 +146,7 @@ export const Input = styled.input`
 `
 
 export const Label = styled.label`
-  margin-top: 20px;
+  margin-top: 1.1em;
 `
 
 export const StyledLink = styled(Link)`

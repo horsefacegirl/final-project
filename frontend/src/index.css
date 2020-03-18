@@ -5,7 +5,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto;
-  text-align: center;
   font-size: 1.1em;
   background-image: url('./images/background.jpg');
   background-size: cover;
@@ -18,18 +17,6 @@ body {
   font-family: inherit;
 }
 
-
-/* .styledDate {
-  color: white !important;
-} */
-
-
-/* important to use !important on every key */
-
-
-/* .styledDate {} */
-
-
 /* Position and sizing of burger button */
 
 .bm-burger-button {
@@ -40,14 +27,12 @@ body {
   top: 25px;
 }
 
-
 /* Color/shape of burger icon bars */
 
 .bm-burger-bars {
-  background: #201f1f;
+  background: #121212;
   border-radius: 5px;
 }
-
 
 /* Color/shape of burger icon bars on hover*/
 
@@ -55,21 +40,12 @@ body {
   background: #21212f;
 }
 
-
 /* Position and sizing of clickable cross button */
 
 .bm-cross-button {
   height: 24px;
   width: 24px;
 }
-
-
-/* Color/shape of close button cross */
-
-.bm-cross {
-  background: #201f1f;
-}
-
 
 /*
 Sidebar wrapper styles
@@ -81,22 +57,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: 100vh;
 }
 
-
 /* General sidebar styles */
 
 .bm-cross-button {
-  top: -64px!important;
+  top: -64px !important;
 }
 
 .bm-menu {
   background: white;
-  padding: 2.5em 1.5em 0;
+  padding: 4em 1.5em 0;
   font-size: 1.15em;
   position: absolute;
   width: 100%;
   bottom: 80px;
 }
-
 
 /* Morph shape necessary with bubble or elastic */
 
@@ -104,20 +78,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
   fill: #373a47;
 }
 
-
 /* Wrapper for item list */
 
 .bm-item-list {
   color: black;
 }
 
-
 /* Individual item */
 
 .bm-item {
   display: inline-block;
+  padding: 0.5em;
+  border-bottom: 1px solid gray;
 }
-
 
 /* Styling of overlay */
 

@@ -69,8 +69,8 @@ export const Statistics = () => {
 
   return (
     <div>
-      <H1>Statistics</H1>
       <FlexColumn>
+        <H1>Statistics</H1>
         <Calendar />
         <div>
           <Dot25>25%</Dot25>

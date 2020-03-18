@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import {
+  FlexColumn,
   H1,
   Levels,
   LevelRow,
@@ -39,7 +40,7 @@ export const Home = () => {
   }
 
   return (
-    <div>
+    <FlexColumn>
       <H1>Hello {username}!</H1>
       <p>Choose your energy level for today</p>
       <Levels>
@@ -60,6 +61,6 @@ export const Home = () => {
           </Button100>
         </LevelRow>
       </Levels>
-    </div>
+    </FlexColumn>
   )
 }
