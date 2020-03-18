@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router-dom'
-import logo2 from '../images/logo2.png'
 import {
-  Header,
-  Logo,
   H1,
   Levels,
   LevelRow,
@@ -43,9 +40,6 @@ export const Home = () => {
 
   return (
     <div>
-      <Header>
-        <Logo src={logo2} alt='logo' />
-      </Header>
       <H1>Hello {username}!</H1>
       <p>Choose your energy level for today</p>
       <Levels>
@@ -69,6 +63,3 @@ export const Home = () => {
     </div>
   )
 }
-
-// Naming of buttons?
-// Range slider?

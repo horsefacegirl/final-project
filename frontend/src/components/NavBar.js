@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { StyledLink } from '../styles'
 import { slide as Menu } from 'react-burger-menu'
 
 const handleLogOut = () => {
@@ -8,9 +9,9 @@ const handleLogOut = () => {
 
 export const Navbar = () => (
   <Menu right>
-    <Link to="/home">Home</Link>
-    <Link to="/stats">Statistics</Link>
-    <Link to="/tips">Tips</Link>
-    <Link to="/" onClick={() => handleLogOut()}>Log out</Link>
+    <StyledLink to="/home">Home</StyledLink>
+    <StyledLink to="/stats">Statistics</StyledLink>
+    <StyledLink to="/tips">Tips</StyledLink>
+    <StyledLink to="/" onClick={() => handleLogOut()}>Log out</StyledLink>
   </Menu>
 )

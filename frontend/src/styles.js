@@ -2,10 +2,9 @@ import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 
 //make a media query here for Header, when burger menu show, logo to the left instead
-export const Header = styled.header`
-  display: flex;
-  justify-content: center;
-  margin: 10px 10px 40px 10px;
+export const StyledHeader = styled.div`
+background: white;
+height: 80px;
 `
 
 export const Logo = styled.img`

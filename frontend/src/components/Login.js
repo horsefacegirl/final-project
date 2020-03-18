@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import logo2 from '../images/logo2.png'
 import {
-  Header,
-  Logo,
   Button,
   Form,
   InputField,
@@ -45,9 +42,6 @@ export const Login = () => {
 
   return (
     <div>
-      <Header>
-        <Logo src={logo2} alt='logo' />
-      </Header>
       <Form onSubmit={handleLogin}>
         <InputField>
           <Label htmlFor='email'>E-MAIL</Label>

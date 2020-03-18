@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import logo2 from '../images/logo2.png'
 import {
-  Header,
-  Logo,
   Button,
   Form,
   InputField,
@@ -47,10 +44,6 @@ export const SignUp = () => {
 
   return (
     <div>
-      <Header>
-        <Logo src={logo2} alt='logo' />
-      </Header>
-
       <Form onSubmit={handleSignUp}>
         <InputField>
           <Label htmlFor='username'>USERNAME</Label>
