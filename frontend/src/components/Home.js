@@ -4,7 +4,9 @@ import logo2 from '../images/logo2.png'
 import {
   Header,
   Logo,
+  H1,
   Levels,
+  LevelRow,
   Button100,
   Button75,
   Button50,
@@ -44,21 +46,25 @@ export const Home = () => {
       <Header>
         <Logo src={logo2} alt='logo' />
       </Header>
-      <h1>Hello {username}!</h1>
-      <p>Choose your energy level</p>
+      <H1>Hello {username}!</H1>
+      <p>Choose your energy level for today</p>
       <Levels>
-        <Button100 id='level100' onClick={() => postLevel(100)}>
-          100%
-        </Button100>
-        <Button75 id='level75' onClick={() => postLevel(75)}>
-          75%
-        </Button75>
-        <Button50 id='level50' onClick={() => postLevel(50)}>
-          50%
-        </Button50>
-        <Button25 id='level25' onClick={() => postLevel(25)}>
-          25%
-        </Button25>
+        <LevelRow>
+          <Button25 id='level25' onClick={() => postLevel(25)}>
+            25%
+          </Button25>
+          <Button50 id='level50' onClick={() => postLevel(50)}>
+            50%
+          </Button50>
+        </LevelRow>
+        <LevelRow>
+          <Button75 id='level75' onClick={() => postLevel(75)}>
+            75%
+          </Button75>
+          <Button100 id='level100' onClick={() => postLevel(100)}>
+            100%
+          </Button100>
+        </LevelRow>
       </Levels>
     </div>
   )
