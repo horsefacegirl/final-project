@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import Calendar from 'react-calendar'
 import { H1, FlexColumn, Dot25, Dot50, Dot75, Dot100 } from '../styles'
 
@@ -10,6 +11,9 @@ const colors = {
 }
 
 export const Statistics = () => {
+  const accessToken = window.localStorage.getItem('accessToken')
+  const history = useHistory()
+
   const handleSetLevels = (levels) => {
     setTimeout(() => {
       levels.forEach((level) => {
@@ -33,12 +37,16 @@ export const Statistics = () => {
   }
 
   useEffect(() => {
+    if (!accessToken) {
+      return
+    }
+
     fetch('https://energy-wise.herokuapp.com/levels', {
       method: 'GET',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: window.localStorage.getItem('accessToken')
+        Authorization: accessToken
       }
     })
       .then((res) => res.json())
@@ -60,6 +68,11 @@ export const Statistics = () => {
       arrows.forEach((element) => element.removeEventListener('click', () => handleSetLevels()))
     }
   }, [])
+
+  if (!accessToken) {
+    history.push('/')
+    return null
+  }
 
   return (
     <div>
