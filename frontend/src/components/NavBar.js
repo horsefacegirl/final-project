@@ -20,7 +20,7 @@ export const Navbar = () => {
       customBurgerIcon={<img src={hamburger} />}
       customCrossIcon={<img src={cross} />}
       right
-      width={window.width < 600 ? '100%' : '40%'}>
+      width={window.width < 600 ? '100%' : '30%'}>
       <StyledLink to='/home' onClick={() => setMenuIsOpen(false)}>
         Home
       </StyledLink>

@@ -17,6 +17,7 @@ body {
   font-family: inherit;
 }
 
+
 /* Position and sizing of burger button */
 
 .bm-burger-button {
@@ -27,6 +28,7 @@ body {
   top: 1.7em;
 }
 
+
 /* Color/shape of burger icon bars */
 
 .bm-burger-bars {
@@ -34,11 +36,13 @@ body {
   border-radius: 5px;
 }
 
+
 /* Color/shape of burger icon bars on hover*/
 
 .bm-burger-bars-hover {
   background: #21212f;
 }
+
 
 /* Position and sizing of clickable cross button */
 
@@ -46,6 +50,7 @@ body {
   height: 24px;
   width: 24px;
 }
+
 
 /*
 Sidebar wrapper styles
@@ -57,10 +62,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: 100vh;
 }
 
+
 /* General sidebar styles */
 
 .bm-cross-button {
-  top: -64px !important;
+  top: -60px !important;
+  width: 36px!important;
+  height: 30px!important;
+  right: 1.4em!important;
 }
 
 .bm-menu {
@@ -72,17 +81,22 @@ Note: Beware of modifying this element as it can break the animations - you shou
   bottom: 80px;
 }
 
+
 /* Morph shape necessary with bubble or elastic */
 
 .bm-morph-shape {
   fill: #373a47;
 }
 
+
 /* Wrapper for item list */
 
 .bm-item-list {
   color: black;
+  max-width: 10em;
+  margin: 0 auto;
 }
+
 
 /* Individual item */
 
@@ -91,6 +105,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 0.5em;
   border-bottom: 1px solid gray;
 }
+
 
 /* Styling of overlay */
 

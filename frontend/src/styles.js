@@ -102,7 +102,8 @@ export const FlexColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 80%;
+  width: 85%;
+  max-width: 650px;
   text-align: center;
 `
 
