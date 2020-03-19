@@ -103,6 +103,7 @@ export const FlexColumn = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 80%;
+  text-align: center;
 `
 
 export const AppInfo = styled.div`
@@ -156,6 +157,7 @@ export const Label = styled.label`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;
+  text-align: center;
   &:hover {
     color: #5c5d8d;
   }
