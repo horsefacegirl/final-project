@@ -7,6 +7,8 @@ import cross from '../images/cross.png'
 
 const handleLogOut = () => {
   window.localStorage.removeItem('accessToken')
+  window.localStorage.removeItem('username')
+  window.localStorage.removeItem('levelValue')
 }
 
 export const Navbar = () => {
@@ -17,8 +19,8 @@ export const Navbar = () => {
     <Menu
       isOpen={menuIsOpen}
       onStateChange={(state) => setMenuIsOpen(state.isOpen)}
-      customBurgerIcon={<img src={hamburger} alt="menu" />}
-      customCrossIcon={<img src={cross} alt="exit menu" />}
+      customBurgerIcon={<img src={hamburger} alt='menu' />}
+      customCrossIcon={<img src={cross} alt='exit menu' />}
       right
       width={window.width < 600 ? '100%' : '30%'}>
       <StyledLink to='/home' onClick={() => setMenuIsOpen(false)}>
