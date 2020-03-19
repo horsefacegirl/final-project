@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
-  font-feature-settings: 'lnum';
+  font-family: "Raleway", sans-serif;
+  font-feature-settings: "lnum";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto;
   font-size: 1.1em;
-  background-image: url('./images/background.jpg');
+  background-image: url("./images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -17,9 +17,7 @@ body {
   font-family: inherit;
 }
 
-
 /* Burger menu styling*/
-
 
 /* Position and sizing of burger button */
 
@@ -31,14 +29,12 @@ body {
   top: 1.7em;
 }
 
-
 /* Position and sizing of clickable cross button */
 
 .bm-cross-button {
   height: 24px;
   width: 24px;
 }
-
 
 /*Sidebar wrapper styles*/
 
@@ -47,14 +43,13 @@ body {
   height: 100vh;
 }
 
-
 /* General sidebar styles */
 
 .bm-cross-button {
-  top: -60px !important;
-  width: 36px!important;
-  height: 30px!important;
-  right: 1.4em!important;
+  top: -23px !important;
+  width: 32px !important;
+  height: 30px !important;
+  right: 1.6em !important;
 }
 
 .bm-menu {
@@ -66,15 +61,13 @@ body {
   bottom: 80px;
 }
 
-
 /* Wrapper for item list */
 
 .bm-item-list {
   color: black;
   max-width: 10em;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
-
 
 /* Individual item */
 
@@ -83,7 +76,6 @@ body {
   padding: 0.5em;
   border-bottom: 1px solid gray;
 }
-
 
 /* Styling of overlay */
 
