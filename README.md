@@ -1,19 +1,15 @@
-# Technigo React Starter App
+# Energy-wise App
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+https://energy-wise.netlify.com
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+# About
 
-## Usage
+Web App created in React where the user can track their energy levels, get advice, and se their energy pattern in a calender view.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+# Disclaimer
 
-Alternatively, if you don't want a new git repo on your account;
+The information and other content provided in this App, or in any linked materials, are not intended and should not be construed as medical advice, nor is the information a substitute for professional medical expertise or treatment.
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+If you or any other person has a medical concern, you should consult with your health care provider or seek other professional medical treatment. Never disregard professional medical advice or delay in seeking it because of something that have read on this blog or in any linked materials. If you think you may have a medical emergency, call your doctor or emergency services immediately.
+
+The opinions and views expressed in this website have no relation to those of any academic, hospital, health practice or other institution.
