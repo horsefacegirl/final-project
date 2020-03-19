@@ -17,8 +17,8 @@ export const Navbar = () => {
     <Menu
       isOpen={menuIsOpen}
       onStateChange={(state) => setMenuIsOpen(state.isOpen)}
-      customBurgerIcon={<img src={hamburger} />}
-      customCrossIcon={<img src={cross} />}
+      customBurgerIcon={<img src={hamburger} alt="menu" />}
+      customCrossIcon={<img src={cross} alt="exit menu" />}
       right
       width={window.width < 600 ? '100%' : '30%'}>
       <StyledLink to='/home' onClick={() => setMenuIsOpen(false)}>

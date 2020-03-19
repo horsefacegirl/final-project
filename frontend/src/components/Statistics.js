@@ -24,7 +24,6 @@ export const Statistics = () => {
           `[aria-label="${formatDate}"]`
         )
         if (selectedDate) {
-          // selectedDate.parentNode.classList.add('styledDate')
           //Set background color for different levels
           selectedDate.parentNode.style.background = colors[level.value]
           selectedDate.style.color = 'white'
@@ -50,7 +49,6 @@ export const Statistics = () => {
           document.getElementsByClassName('react-calendar__navigation__arrow')
         )
         //addEventListener runs handleSetLevels again when clicking on either of these buttons.
-        //No need for useState
         arrows.forEach((element) =>
           element.addEventListener('click', () => handleSetLevels(json))
         )

@@ -96,7 +96,6 @@ app.post('/users', async (req, res) => {
 })
 
 // Log in
-// to do: find new endpoint name
 app.post('/sessions', async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email })

@@ -1,7 +1,6 @@
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 
-//make a media query here for Header, when burger menu show, logo to the left instead
 export const StyledHeader = styled.div`
   background: white;
   padding: 0.7em 0 0.7em 1.2em;
