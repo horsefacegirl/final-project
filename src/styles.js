@@ -161,6 +161,7 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;
   text-align: center;
+  outline: none;
   &:hover {
     color: #5c5d8d;
   }
