@@ -57,7 +57,9 @@ export const Statistics = () => {
           document.getElementsByClassName('react-calendar__navigation__arrow')
         )
         // addEventListener runs handleSetLevels again when clicking on either of these buttons.
-        arrows.forEach((element) => element.addEventListener('click', () => handleSetLevels(json)))
+        arrows.forEach((element) =>
+          element.addEventListener('click', () => handleSetLevels(json))
+        )
       })
 
     // Clean up listeners
@@ -65,7 +67,9 @@ export const Statistics = () => {
       const arrows = Array.from(
         document.getElementsByClassName('react-calendar__navigation__arrow')
       )
-      arrows.forEach((element) => element.removeEventListener('click', () => handleSetLevels()))
+      arrows.forEach((element) =>
+        element.removeEventListener('click', () => handleSetLevels())
+      )
     }
   }, [])
 
