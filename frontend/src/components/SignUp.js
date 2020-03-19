@@ -1,13 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import {
-  Button,
-  Form,
-  InputField,
-  Input,
-  Label,
-  StyledLink
-} from '../styles'
+import { Button, Form, InputField, Input, Label, StyledLink } from '../styles'
 
 export const SignUp = () => {
   const history = useHistory()
@@ -69,9 +62,11 @@ export const SignUp = () => {
             onChange={(event) => setPassword(event.target.value)}></Input>
         </InputField>
         <Button type='submit'>Sign up</Button>
+        <p>
+          <StyledLink to='/login'>Already a user? Sign in here</StyledLink>
+        </p>
+        {errorMessage && <h2>{errorMessage}</h2>}
       </Form>
-      <StyledLink to='/login'>Already a user? Sign in here</StyledLink>
-      {errorMessage && <h2>{errorMessage}</h2>}
     </div>
   )
 }

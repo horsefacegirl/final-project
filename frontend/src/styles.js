@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 export const StyledHeader = styled.div`
   background: white;
   padding: 0.7em 0 0.7em 1.2em;
+  @media (min-width: 768px) {
+    text-align: center;
+  }
 `
 
 export const Logo = styled.img`
@@ -119,6 +122,7 @@ export const LevelRow = styled.div`
 
 export const Form = styled.form`
   margin: 3em 0 1em;
+  text-align: center;
 `
 
 export const InputField = styled.div`
