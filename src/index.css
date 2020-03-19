@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-feature-settings: "lnum";
+  font-family: 'Raleway', sans-serif;
+  font-feature-settings: 'lnum';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto;
   font-size: 1.1em;
-  background-image: url("./images/background.jpg");
+  background-image: url('./images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -46,7 +46,7 @@ body {
 /* General sidebar styles */
 
 .bm-cross-button {
-  top: -23px !important;
+  top: -111px !important;
   width: 32px !important;
   height: 30px !important;
   right: 1.6em !important;
@@ -58,7 +58,7 @@ body {
   font-size: 1.15em;
   position: absolute;
   width: 100%;
-  bottom: 80px;
+  bottom: 130px;
 }
 
 /* Wrapper for item list */
@@ -67,6 +67,7 @@ body {
   color: black;
   max-width: 10em;
   margin: 3rem auto;
+  height: 0 !important;
 }
 
 /* Individual item */

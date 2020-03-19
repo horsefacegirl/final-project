@@ -1,5 +1,5 @@
-import styled from "styled-components/macro";
-import { Link } from "react-router-dom";
+import styled from 'styled-components/macro'
+import { Link } from 'react-router-dom'
 
 export const StyledHeader = styled.div`
   background: white;
@@ -10,18 +10,18 @@ export const StyledHeader = styled.div`
   @media (min-width: 768px) {
     text-align: center;
   }
-`;
+`
 
 export const Logo = styled.img`
   height: 60px;
-`;
+`
 
 export const H1 = styled.h1`
   text-transform: uppercase;
   font-weight: 900;
   margin-top: 0;
   text-align: center;
-`;
+`
 
 export const Button = styled.button`
   display: inline-block;
@@ -35,10 +35,10 @@ export const Button = styled.button`
   font-family: inherit;
   font-weight: 600;
   transition: color 0.4s ease 0s;
-  background: ${props => (props.primary ? "black" : "transparent")};
-  color: ${props => (props.primary ? "white" : "black")};
+  background: ${(props) => (props.primary ? 'black' : 'transparent')};
+  color: ${(props) => (props.primary ? 'white' : 'black')};
   }
-`;
+`
 
 const ButtonA = styled.button`
   width: 100px;
@@ -51,23 +51,23 @@ const ButtonA = styled.button`
   border-radius: 50px;
   color: white;
   cursor: pointer;
-`;
+`
 
 export const Button25 = styled(ButtonA)`
   background-color: #654f6f;
-`;
+`
 
 export const Button50 = styled(ButtonA)`
   background-color: #7576a5;
-`;
+`
 
 export const Button75 = styled(ButtonA)`
   background-color: #7ea16b;
-`;
+`
 
 export const Button100 = styled(ButtonA)`
   background-color: #eac419;
-`;
+`
 
 const Dot = styled.span`
   width: 40px;
@@ -81,60 +81,60 @@ const Dot = styled.span`
   font-weight: bold;
   font-size: 0.8em;
   padding: 4px;
-`;
+`
 
 export const Dot25 = styled(Dot)`
   background-color: #654f6f;
-`;
+`
 
 export const Dot50 = styled(Dot)`
   background-color: #7576a5;
-`;
+`
 
 export const Dot75 = styled(Dot)`
   background-color: #7ea16b;
-`;
+`
 
 export const Dot100 = styled(Dot)`
   background-color: #eac419;
-`;
+`
 
 export const FlexColumn = styled.div`
-  margin: 3em auto;
+  margin: 8em auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 85%;
   max-width: 650px;
   text-align: center;
-`;
+`
 
 export const AppInfo = styled.div`
   text-align: center;
-  margin: 4em 0 0;
-`;
+  margin: 8em 0 -5em;
+`
 
 export const Levels = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 
 export const LevelRow = styled.div`
   display: inline;
-`;
+`
 
 export const Form = styled.form`
-  margin: 3em 0 1em;
+  margin: 8em 0 1em;
   text-align: center;
-`;
+`
 
 export const InputField = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 4em;
-`;
+`
 
 export const Input = styled.input`
   background: transparent;
@@ -151,11 +151,11 @@ export const Input = styled.input`
   :focus {
     outline: none;
   }
-`;
+`
 
 export const Label = styled.label`
   margin-top: 1.1em;
-`;
+`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
@@ -164,4 +164,4 @@ export const StyledLink = styled(Link)`
   &:hover {
     color: #5c5d8d;
   }
-`;
+`
