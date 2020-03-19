@@ -23,8 +23,8 @@ export const Tips = () => {
         <H1>{levelValue}%</H1>
         <p>Always listen to your body... or</p>
         <h2>{getRandomTips}</h2>
+        <Button onClick={() => history.push('/stats')}>See your pattern</Button>
       </FlexColumn>
-      <Button onClick={() => history.push('/stats')}>See your pattern</Button>
     </>
   )
 }
