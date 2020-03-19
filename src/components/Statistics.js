@@ -19,12 +19,12 @@ export const Statistics = () => {
           month: 'long',
           day: 'numeric'
         })
-        //Select date by aria-label (unique)
+        // Select date by aria-label (unique)
         const selectedDate = document.querySelector(
           `[aria-label="${formatDate}"]`
         )
         if (selectedDate) {
-          //Set background color for different levels
+          // Set background color for different levels
           selectedDate.parentNode.style.background = colors[level.value]
           selectedDate.style.color = 'white'
         }
@@ -33,7 +33,7 @@ export const Statistics = () => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:8080/levels', {
+    fetch('https://energy-wise.herokuapp.com/levels', {
       method: 'GET',
       headers: {
         Accept: 'application/json',
@@ -43,25 +43,21 @@ export const Statistics = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        //handle response in handleSetLevels (not saving)
+        // handle response in handleSetLevels (not saving)
         handleSetLevels(json)
         const arrows = Array.from(
           document.getElementsByClassName('react-calendar__navigation__arrow')
         )
-        //addEventListener runs handleSetLevels again when clicking on either of these buttons.
-        arrows.forEach((element) =>
-          element.addEventListener('click', () => handleSetLevels(json))
-        )
+        // addEventListener runs handleSetLevels again when clicking on either of these buttons.
+        arrows.forEach((element) => element.addEventListener('click', () => handleSetLevels(json)))
       })
 
-    //Clean up listeners
+    // Clean up listeners
     return () => {
       const arrows = Array.from(
         document.getElementsByClassName('react-calendar__navigation__arrow')
       )
-      arrows.forEach((element) =>
-        element.removeEventListener('click', () => handleSetLevels())
-      )
+      arrows.forEach((element) => element.removeEventListener('click', () => handleSetLevels()))
     }
   }, [])
 

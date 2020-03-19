@@ -17,7 +17,7 @@ export const Home = () => {
   const username = window.localStorage.getItem('username')
 
   const postLevel = (level) => {
-    fetch('http://localhost:8080/levels', {
+    fetch('https://energy-wise.herokuapp.com/levels', {
       method: 'POST',
       body: JSON.stringify({ value: level, date: new Date() }),
       headers: {

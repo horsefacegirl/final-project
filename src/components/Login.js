@@ -10,7 +10,7 @@ export const Login = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault()
-    fetch('http://localhost:8080/sessions', {
+    fetch('https://energy-wise.herokuapp.com/sessions', {
       method: 'POST',
       body: JSON.stringify({
         email,
